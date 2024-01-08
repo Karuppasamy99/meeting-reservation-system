@@ -20,81 +20,77 @@ const ReservationForm = ({ handleRoomReservation, setActive }) => {
 
   const currentTime = dateNow.getHours() + ":" + dateNow.getMinutes();
   return (
-    <div className="">
-      <div className="mx-auto w-full max-w-[550px] shadow-lg p-5">
-        <form onSubmit={handleReservation}>
-          <h1 className="font-semibold text-2xl text-center p-5">
-            Reservation Form
-          </h1>
-          <div className="-mx-3 flex flex-wrap">
-            <div className="w-full px-3 sm:w-1/2">
-              <div className="mb-5">
-                <label
-                  htmlFor="fName"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  name="fName"
-                  id="fName"
-                  placeholder="First Name"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  onChange={(e) => setFirstName(e.target.value)}
-                  required
-                />
+    <div>
+      <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+          <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+            <div className="max-w-md mx-auto">
+              <div>
+                <h1 className="text-2xl font-semibold">SignUp Form</h1>
               </div>
-            </div>
-            <div className="w-full px-3 sm:w-1/2">
-              <div className="mb-5">
-                <label
-                  htmlFor="lName"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  name="lName"
-                  id="lName"
-                  placeholder="Last Name"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  onChange={(e) => setLastName(e.target.value)}
-                  required
-                />
-              </div>
-            </div>
-          </div>
-          <div className="mb-5">
-            <label
-              htmlFor="guest"
-              className="mb-3 block text-base font-medium text-[#07074D]"
-            >
-              How many guest are you bringing?
-            </label>
-            <input
-              type="number"
-              name="guest"
-              id="guest"
-              placeholder="5"
-              min="0"
-              className="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              onChange={(e) => setNoOfGuests(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className="-mx-3 flex flex-wrap">
-            <div className="w-full px-3 sm:w-1/2">
-              <div className="mb-5">
-                <label
-                  htmlFor="date"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Date
-                </label>
-                <input
+              <form onSubmit={handleReservation}>
+                <div className="divide-y divide-gray-200">
+                  <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                    <div className="relative">
+                      <input
+                        autoComplete="off"
+                        id="firstName"
+                        name="firstName"
+                        type="text"
+                        className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="First name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        required
+                      />
+                      <label
+                        htmlFor="firstName"
+                        className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      >
+                        First Name
+                      </label>
+                    </div>
+                    <div className="relative">
+                      <input
+                        autoComplete="off"
+                        id="lastName"
+                        name="lastName"
+                        type="text"
+                        className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="First name"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        required
+                      />
+                      <label
+                        htmlFor="lastName"
+                        className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      >
+                        First Name
+                      </label>
+                    </div>
+                    <div className="relative">
+                      <input
+                        autoComplete="off"
+                        id="noOfGuests"
+                        name="noOfGuests"
+                        type="noOfGuests"
+                        className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="No of guest"
+                        value={noOfGuests}
+                        onChange={(e) => setNoOfGuests(e.target.value)}
+                        required
+                      />
+                      <label
+                        htmlFor="noOfGuests"
+                        className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      >
+                        Number of guest
+                      </label>
+                    </div>
+                    <div className="relative">
+                    <input
                   type="date"
                   name="date"
                   id="date"
@@ -105,39 +101,47 @@ const ReservationForm = ({ handleRoomReservation, setActive }) => {
                   onChange={(e) => setDate(e.target.value)}
                   required
                 />
-              </div>
-            </div>
-            <div className="w-full px-3 sm:w-1/2">
-              <div className="mb-5">
-                <label
-                  htmlFor="time"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
-                >
-                  Time
-                </label>
-                <input
+                      <label
+                        htmlFor="date"
+                        className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      >
+                        Date
+                      </label>
+                    </div>
+                    <div className="relative">
+                    <input
                   type="time"
                   name="time"
                   id="time"
                   className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   value={time}
                   min={currentTime}
+                 
                   onChange={(e) => setTime(e.target.value)}
                   required
                 />
-              </div>
+                      <label
+                        htmlFor="time"
+                        className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                      >
+                        Time
+                      </label>
+                    </div>
+                    <div className="relative">
+                      <button
+                        type="submit"
+                        className="bg-blue-500 text-white rounded-md px-2 py-1"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              
             </div>
           </div>
-
-          <div>
-            <button
-              type="submit"
-              className="hover:shadow-form rounded-md bg-blue-500 py-3 px-8 text-center text-base font-semibold text-white outline-none"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   );
