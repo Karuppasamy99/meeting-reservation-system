@@ -75,7 +75,7 @@ const ReservationForm = ({ handleRoomReservation, setActive }) => {
                         autoComplete="off"
                         id="noOfGuests"
                         name="noOfGuests"
-                        type="noOfGuests"
+                        type="number"
                         className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
                         placeholder="No of guest"
                         value={noOfGuests}
