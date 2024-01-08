@@ -55,7 +55,7 @@ const Home = () => {
   }, [meetingList]);
 
   return (
-    <div className="w-screen h-screen">
+    <div className="">
       <div className="flex justify-between items-center">
         <div className="p-10 text-3xl font-bold text-center">
           Meeting room reservation system
@@ -156,17 +156,20 @@ const Home = () => {
         </div>
       </div>
       {active && (
-        <div className="absolute top-0 left-0 w-screen h-screen bg-gray-50">
+        
+        <div className="absolute top-0 left-0 border bg-gray-50 shadow-md   w-[100%] min-h-fit">
           <div
-            className="min-w-screen min-h-screen absolute top-[10%] left-[32%]"
+            className="relative sm:max-w-xl sm:mx-auto"
             ref={ref}
           >
+           
             <ReservationForm
               setActive={setActive}
               handleRoomReservation={handleRoomReservation}
             />
           </div>
         </div>
+      
       )}
     </div>
   );
