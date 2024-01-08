@@ -34,7 +34,7 @@ First we find the email address of the user is registered with the "login_detail
 
 If both the email and password are valid, then we redirect to the Home page and we update the current user credentials in the local storage. if not, then we show the error message.
 
-- Home page
+# Home page
 
 Here We display the list of meeting rooms and their status information and log out button.
 
