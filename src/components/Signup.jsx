@@ -5,7 +5,7 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [formData, setFormData] = useState(null);
+  const [formData, setFormData] = useState(JSON.parse(localStorage.getItem("current_user_details")) || null);
   const [error, setError] = useState(false);
   // const navigate = useNavigate()
 
